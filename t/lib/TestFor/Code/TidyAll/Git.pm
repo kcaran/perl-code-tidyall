@@ -22,6 +22,7 @@ $ENV{GIT_AUTHOR_EMAIL} = $ENV{GIT_COMMITTER_EMAIL} = 'git-author@example.com';
 # Ignore local configuration files, which may change the default branch from
 # "master" to "main".
 $ENV{GIT_CONFIG_GLOBAL} = $ENV{GIT_CONFIG_SYSTEM} = File::Spec->devnull;
+$ENV{GIT_CONFIG_SYSTEM} = "./.gitconfig";
 
 BEGIN {
     if (IS_WIN32) {
